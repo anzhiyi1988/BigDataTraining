@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os, time
+import sys
+import os
+import time
 
-INTPUT_PATH = "hdfs://bigdata:9000/flume/record/"
-OUTPUT_PATH = "hdfs://bigdata:9000/etl/record/"
-LOAD_CMD = "java -cp /home/bigdata/etl/etl-1.0-SNAPSHOT-jar-with-dependencies.jar bigdata.etl.loadDataToHive %s  %s  %s"
-HADOOP_CMD = "hadoop jar /home/bigdata/hadoop-2.7.3/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -D mapred.reduce.tasks=0 -D mapred.map.tasks=1  -input %s -output %s -mapper /home/bigdata/etl/etl.py -file /home/bigdata/etl/etl.py"
+INTPUT_PATH = "hdfs://master:9000/flume/record/"
+OUTPUT_PATH = "hdfs://master:9000/etl/record/"
+LOAD_CMD = "java -cp /home/hadoop/etl/etl.jar orz.an.log.etl.load2hive.LoadDataToHive %s  %s  %s"
+HADOOP_CMD = "hadoop jar /home/hadoop/hadoop-2.7.3/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -D mapred.reduce.tasks=0 -D mapred.map.tasks=1  -input %s -output %s -mapper /home/hadoop/etl/etl.py -file /home/hadoop/etl/etl.py"
 
 
 def getCurrentYmdHM():
@@ -21,7 +23,11 @@ def getCurrentYmdHM():
 
 
 def startETL():
-    subPath = getCurrentYmdHM()
+    in_day = sys.argv[1]
+    in_time = sys.argv[2]
+    print in_day + "/" + in_time
+
+    subPath = in_day + "/" + in_time
     input = INTPUT_PATH + subPath
     output = OUTPUT_PATH + subPath
 

@@ -1,0 +1,4 @@
+LOAD DATA LOCAL INFILE '/home/mysql/user.list' INTO TABLE log.user_dimension
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
