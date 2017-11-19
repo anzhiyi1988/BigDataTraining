@@ -9,10 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>LogAnalysis</artifactId>
+    <artifactId>WebAnalysis</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>LoadDataToHive</module>
+        <module>dashboard</module>
     </modules>
 </project>

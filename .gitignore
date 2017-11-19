@@ -3,3 +3,5 @@
 /CodeWithJava/CodeWithJava.iml
 /CodeWithScala/CodeWithScala.iml
 /PlayScala/PlayScala.iml
+*.iml
+target

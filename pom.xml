@@ -16,6 +16,7 @@
         <module>CodeWithScala</module>
         <module>CodeWithJava</module>
         <module>LogAnalysis</module>
+        <module>WebAnalysis</module>
     </modules>
 
     <repositories>
