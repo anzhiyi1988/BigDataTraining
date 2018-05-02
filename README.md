@@ -1,2 +1,20 @@
 # BigDataTraining
-hadoop学习代码示例
+大数据学习相关代码示例，三个练习，四个系统和其他一些配置文档等。
+##PlayScala
+学习Scala时候的一些练习
+##CodeWithJava
+学习Hadoop和spark时，采用Java完成相关练习
+##CodeWithScala
+学习Hadoop和spark时，采用Scala完成相关练习，和Java的形成对比。
+##LogAnalysis
+一个简单的日志分析系统，主要完成日志收集、处理、计算、展示，采用hadoop实现。
+##WebAnalysis
+一个简单的日志分析系统，采用spark实现。
+##persona
+一个简单的用户画像系统，采用hbase实现
+##MachineLearning
+一个简单的机器学习系统，采用mllib
+##Configuration
+Hadoop和spark相关组件的配置文件，以及相关启停脚本。
+##doc
+一些描述性文档。
